@@ -10,9 +10,7 @@
         <div>
           <v-img
           :src="require('./assets/logo.png')"
-          class="my-3"
           contain
-          height="200"
         />
         </div>
       <div>almas s</div>
