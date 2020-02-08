@@ -7,6 +7,14 @@
     >
       <div class="d-flex align-center">
         <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
+        <div>
+          <v-img
+          :src="require('./assets/logo.png')"
+          class="my-3"
+          contain
+          height="200"
+        />
+        </div>
       <div>almas s</div>
       </div>
 
