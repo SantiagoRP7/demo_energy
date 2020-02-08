@@ -7,13 +7,14 @@
     >
       <div class="d-flex align-center">
         <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
-        <div>
           <v-img
+          class="shrink mr-2"
           :src="require('./assets/logo.png')"
           contain
+          transition="scale-transition"
+          width="145"
         />
-        </div>
-      <div>almas s</div>
+      
       </div>
 
     </v-app-bar> 
