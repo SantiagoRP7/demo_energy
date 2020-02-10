@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app >
     <v-app-bar
       app
       color="#949599"
@@ -8,11 +8,12 @@
       <div class="d-flex align-center">
         <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
           <v-img
-          class="shrink mr-2"
           :src="require('./assets/logo.png')"
           contain
           transition="scale-transition"
-          width="145"
+          max-width="145"
+          min-width="130"
+          
         />
       
       </div>
@@ -27,13 +28,21 @@
         v-model="drawer"
         absolute
         temporary
+        
+        
       >
       <v-list nav dense>
-        <v-list-item-group>
+        
           <v-list-item>
-            Pagos
+            <v-list-item-content>
+              <v-list-item-title> Tesla Energy </v-list-item-title>
+              <v-list-item-subtitle>Your Energy </v-list-item-subtitle>
+            </v-list-item-content>
           </v-list-item>
-
+      </v-list>
+          <v-divider></v-divider>
+      <v-list nav dense>
+        <v-list-item-group>
           <v-list-item>
             Contador
           </v-list-item>
@@ -41,9 +50,10 @@
           <v-list-item>
             span
           </v-list-item>
-
         </v-list-item-group>
       </v-list>
+        
+      
       </v-navigation-drawer>
   </v-app>
 </template>
@@ -60,7 +70,11 @@ export default {
 
   data: () => ({
     //
-    drawer: false,
+    drawer: true,
   }),
 };
 </script>
+
+<style>
+  html { overflow-y: auto }
+</style>
