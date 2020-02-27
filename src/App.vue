@@ -6,7 +6,7 @@
       dark
     >
       <div class="d-flex align-center">
-        <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
+        <!-- <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon> -->
           <v-img
           :src="require('./assets/logo.png')"
           contain
@@ -20,16 +20,16 @@
 
     </v-app-bar> 
 
-    <v-content>
-      <HelloWorld/>
-    </v-content>
 
-    <v-navigation-drawer
+
+    <v-content>
+          <v-navigation-drawer
         v-model="drawer"
         absolute
-        temporary
-        
-        
+        permanent
+        mini-variant
+        expand-on-hover
+        clipped
       >
       <v-list nav dense>
         
@@ -55,6 +55,13 @@
         
       
       </v-navigation-drawer>
+      <div>
+        <HelloWorld/>
+      </div>
+      
+    </v-content>
+
+    
   </v-app>
 </template>
 
@@ -65,7 +72,7 @@ export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+   HelloWorld,
   },
 
   data: () => ({
@@ -76,5 +83,6 @@ export default {
 </script>
 
 <style>
-  html { overflow-y: auto }
+  html { overflow-y: auto; }
+  
 </style>
